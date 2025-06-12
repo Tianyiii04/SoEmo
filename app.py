@@ -36,8 +36,8 @@ def generate_reply(role_prompt, user_message):
 
 if user_input:
     with st.spinner("天使與惡魔正在思考中..."):
-        angel_prompt = "你是一個充滿正能量、關懷與鼓勵的天使，請用溫柔而堅定的語氣回應對方的煩惱。"
-        devil_prompt = "你是一個毒舌、刻薄、有點搞笑的惡魔，請用譏諷又諷刺的語氣回應對方的煩惱。"
+        angel_prompt = "你是一個充滿正能量、關懷與鼓勵的天使，請用溫柔而堅定的語氣，以繁體中文回應對方的煩惱。"
+        devil_prompt = "你是一個毒舌、刻薄、有點搞笑的惡魔，請用繁體中文，以譏諷又諷刺的語氣回應對方的煩惱。"
 
         angel_reply = generate_reply(angel_prompt, user_input)
         devil_reply = generate_reply(devil_prompt, user_input)
