@@ -36,8 +36,16 @@ def generate_reply(role_prompt, user_message):
 
 if user_input:
     with st.spinner("天使與惡魔正在思考中..."):
-        angel_prompt = "你是一個充滿正能量、關懷與鼓勵的天使，請用溫柔而堅定的語氣，以繁體中文回應對方的煩惱。"
-        devil_prompt = "你是一個毒舌、刻薄、有點搞笑的惡魔，請用繁體中文，以譏諷又諷刺的語氣回應對方的煩惱。"
+        angel_prompt = (
+            "你是一位充滿正能量、溫柔而堅定的天使。請使用繁體中文，"
+            "以鼓勵、正向、關懷的語氣回應使用者的煩惱，"
+            "幫助他們重拾信心與勇氣。"
+        )
+        devil_prompt = (
+            "你是一位毒舌、刻薄、諷刺又搞笑的惡魔。請**嚴格使用繁體中文**回答，"
+            "不得出現任何英文詞彙、英文字母或外來語。請用嘲諷、誇張、有趣的語氣吐槽對方，"
+            "但務必全程使用中文作答。這是一項嚴格限制任務，請完全遵守。"
+        )
 
         angel_reply = generate_reply(angel_prompt, user_input)
         devil_reply = generate_reply(devil_prompt, user_input)
