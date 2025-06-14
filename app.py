@@ -5,7 +5,7 @@ import requests
 # 頁面設定
 st.set_page_config(page_title="天使與惡魔 GPT 聊天 App 😇😈", layout="centered")
 
-st.title("直面你心中的兩個聲音——😇 天使 vs 😈 惡魔GPT回應機器人!")
+st.title("SoEmo：當你 emo 到連 AI 都分裂成兩個人格")
 st.markdown("輸入你的煩惱，看看天使與惡魔怎麼說！(此產品使用 Groq + LLaMA 模型即時生成回答。)")
 
 # 使用者輸入
