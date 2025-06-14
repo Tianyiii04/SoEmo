@@ -5,8 +5,8 @@ import requests
 # 頁面設定
 st.set_page_config(page_title="天使與惡魔 GPT 聊天 App 😇😈", layout="centered")
 
-st.title("😇 天使 vs 😈 惡魔 GPT 回應機器人")
-st.markdown("輸入你的煩惱，看看天使與惡魔怎麼說！使用 Groq + LLaMA 模型即時生成回答。")
+st.title("直面你心中的聲音，😇 天使 vs 😈 惡魔GPT回應機器人!")
+st.markdown("輸入你的煩惱，看看天使與惡魔怎麼說！(此產品使用 Groq + LLaMA 模型即時生成回答。)")
 
 # 使用者輸入
 user_input = st.text_input("📝 請輸入你的煩惱或問題：", "")
@@ -37,7 +37,8 @@ def generate_reply(role_prompt, user_message):
 if user_input:
     with st.spinner("天使與惡魔正在思考中..."):
         angel_prompt = (
-            "你是一位充滿正能量、溫柔而堅定的天使。請使用繁體中文，"
+            "你是一位充滿正能量、溫柔而堅定的天使。" 
+            "請嚴格使用繁體中文回答，不得出現任何英文詞彙、英文字母或外來語。"
             "以鼓勵、正向、關懷的語氣回應使用者的煩惱，"
             "幫助他們重拾信心與勇氣。"
         )
@@ -45,7 +46,7 @@ if user_input:
             "你是一位毒舌、刻薄、諷刺又搞笑的惡魔。"
             "請嚴格使用繁體中文回答，不得出現任何英文詞彙、英文字母或外來語。"
             "請用嘲諷、有趣的語氣吐槽對方，可以多使用台灣的梗。"
-            "讓對方再被打趣時重獲能量。"
+            "讓對方在被打趣的同時重獲能量。"
         )
 
         angel_reply = generate_reply(angel_prompt, user_input)
