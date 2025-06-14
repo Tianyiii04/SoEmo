@@ -3,10 +3,10 @@ import streamlit as st
 import requests
 
 # 頁面設定
-st.set_page_config(page_title="天使與惡魔 GPT 聊天 App 😇😈", layout="centered")
+st.set_page_config(page_title="SoEmo：天使與惡魔 GPT 聊天 App 😇😈", layout="centered")
 
 st.title("SoEmo：當你 emo 到連 AI 都分裂成兩個人格")
-st.markdown("輸入你的煩惱，看看天使與惡魔怎麼說！(此產品使用 Groq + LLaMA 模型即時生成回答。)")
+st.markdown("輸入你的煩惱，看看你心中的天使與惡魔怎麼說！(此產品使用 Groq + LLaMA 模型即時生成回答。)")
 
 # 使用者輸入
 user_input = st.text_input("📝 請輸入你的煩惱或問題：", "")
